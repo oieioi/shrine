@@ -137,7 +137,7 @@ class Shrine
       if @presign
         data = @presign.call(location, options, request)
       else
-        data = storage.presign(location, options)
+        data = storage.presign(location, **options)
       end
 
       if data.respond_to?(:to_h)
